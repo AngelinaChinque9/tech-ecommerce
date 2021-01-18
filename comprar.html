@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosario Tech</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    
+
+
+
+</head>
+<body>
+
+
+
+
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-film mr-2"></i>
+                Rosario Tech
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-1 active" aria-current="page" href="index.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-2" href="index.html">Promociones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-3" href="about.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-4" href="contact.html">Contacto</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/hero.jpg">
+        <form class="d-flex tm-search-form">
+            <input class="form-control tm-search-input" type="search" placeholder="Buscar..." aria-label="Search">
+            <button class="btn btn-outline-success tm-search-btn" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row mb-4">
+            <h2 class="col-12 tm-text-primary">Aca va la lista de productos locos</h2>
+        </div>
+        <div class="row tm-mb-90">            
+            <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+
+
+
+                <div id="grid"></div>
+		                <script>
+                    $(document).ready(function() {
+                        $("#grid").kendoGrid({
+                            dataSource: {
+                                data: trabajos,
+                                schema: {
+                                    model: {
+                                        fields: {
+                                            Anio: { type: "string" },
+                                            Empresa: { type: "string" },
+                                            Posicion: { type: "string" }
+                                        }
+                                    }
+                                },
+                                pageSize: 5
+                            },
+                            height: 200,
+                            scrollable: true,
+                            sortable: true,
+                            filterable: true,
+                            pageable: {
+                                input: true,
+                                numeric: false
+                            },
+                            columns: [
+                                
+                                { field: "Anio", title: "Desde - hasta ", width: "230px" },
+                                { field: "Empresa", title: "Empresa",  width: "130px" },
+                                { field: "Posicion", title: "Posicion", width: "130px" }						]
+                        });
+                    });
+                </script>
+             
+                
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+                <div class="tm-bg-gray tm-video-details">
+                    <p class="mb-4">
+                        Descripción de producto seleccionado. XXXXXXXXXXXXXXXXXXXXXXXXX<BR>
+                            XXXXXXXXXXXXXXXXXXXX
+                    </p>
+                    <div class="text-center mb-5">
+                        <a href="#" class="btn btn-primary tm-btn-big">COMPRAR</a>
+                    </div>                    
+                    <div class="mb-4 d-flex flex-wrap">
+                        <div class="mr-4 mb-2">
+                            <span class="tm-text-gray-dark">Resolución: </span><span class="tm-text-primary">1920x1080</span>
+                        </div>
+                        <div class="mr-4 mb-2">
+                            <span class="tm-text-gray-dark">Garantía: </span><span class="tm-text-primary">MP4</span>
+                        </div>
+                        <div>
+                            <span class="tm-text-gray-dark">Duración: </span><span class="tm-text-primary">00:00:20</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="tm-text-gray-dark mb-3">Promociones bancarias</h3>
+                        <p>En bancos: Santander, ICBC, IHBC Y Macro hasta 6 cuotas sin interés. 10% de descuento en efectivo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <h2 class="col-12 tm-text-primary">
+                Otras personas también buscan
+            </h2>
+        </div>
+        <div class="row mb-3 tm-gallery">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-01.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>AIRES</h2>
+                        <a href="#">View more</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">6 cuotas sin interés
+                    </span>
+                    <span>Desde $35,999</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-02.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>VENTILADORES</h2>
+                        <a href="#">View more</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">6 cuotas sin interés</span>
+                    <span>Desde $2,999</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-03.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>CELULARES</h2>
+                        <a href="#">View more</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">12 Cuotas sin interés</span>
+                    <span>Desde $23,999</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-04.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>TELEVISORES</h2>
+                        <a href="#">View more</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">9 Cuotas sin interés</span>
+                    <span>Desde $45,999</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-05.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Netbooks</h2>
+                        <a href="photo-detail.html">Ver más</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">AHORA 12</span>
+                    <span>Desde $34,999</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-06.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Notebooks</h2>
+                        <a href="photo-detail.html">Ver más</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">AHORA 12</span>
+                    <span>Desde $39,999</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-07.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Cuidado personal</h2>
+                        <a href="photo-detail.html">Ver más</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">3 Cuotas sin interés</span>
+                    <span>Desde $5,999</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="img/img-08.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>Muebles</h2>
+                        <a href="photo-detail.html">Ver más</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">9 Cuotas sin interés</span>
+                    <span>Desde $19,999</span>
+                </div>
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container-fluid, tm-container-content -->
+
+
+
+    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+        <div class="container-fluid tm-container-small">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">Rosario Tech</h3>
+                    <p>¿Tenés un crédito? <a href="#">Mirá cómo pagarlo.</a> Ahora también podés hacerlo online o descargar la cuponera. Podes consultar tus promociones bancarias en la pestaña <a href="contact.html">"Contacto"</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">Links</h3>
+                    <ul class="tm-footer-links pl-0">
+                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="#">Soporte</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
+                    <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
+                        <li class="mb-2"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                        <li class="mb-2"><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mb-2"><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+                        <li class="mb-2"><a href="https://pinterest.com"><i class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                    <a href="#" class="tm-text-gray text-right d-block mb-2">Terminos de uso</a>
+                    <a href="#" class="tm-text-gray text-right d-block">Politicas de privacidad</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
+                    Eccomerce by <a href="#" class="tm-text-gray" rel="sponsored" target="_parent">Integra Software </a>
+                </div>
+                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
+                    Diseñado by <a href="#" class="tm-text-gray" rel="sponsored" target="_parent">Angelina Chinque</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+    </script>
+ 
+
+</body>
+</html>
